@@ -1,0 +1,166 @@
+
+<template>
+  <div >
+    你好，Vue
+     <!--
+      template 表示模板标签
+
+      vue单文件方式：
+      单文件是指的以*.vue结尾的文件，最终会通过webpack编译成*.js在浏览器运行
+      vue文件由template标签+script标签+style标签组成的
+
+       注意：
+       1、在Vue里面的语法要求template标签中只能有一个根标签，如果想使用多个那么需要将多个标
+签包裹在一个标签里
+       2、在script中 ，按照export default {在此处编写业务逻辑} 来写
+       3、在style中可以设置scoped属性，让其只在template中生效
+
+       Vue工程项目中目录的解析
+       src目录存放可以看懂的源代码，具备一定的功能划分，可以利用MVC的设计模式来设计
+       dist目录下一般存放的是真实上线的代码，这里面的代码一般都是都会混淆以后的代码
+       webpack.config.js 文件，它主要是为了将src目录下的文件生成dist目录下的代码
+       package.js 文件， 一般存放在node_modules/babel-loader/lib/package.json中，它主要是对
+包的信息进行描述
+
+       双向数据流：
+       1、JS内存属性发生改变，影响页面的变化
+       2、页面的改变影响JS内存属性的改变
+      -->
+
+    <hello-world></hello-world>
+
+    <!--todo-list组件案例-->
+    <todo-list></todo-list>
+    <!--
+    11、常用指令的练习
+    -->
+    <common-instruction_11></common-instruction_11>
+
+
+    <!--柱状图的使用-->
+    <e-bar></e-bar>
+
+
+    <!--methods和on的使用案例-->
+    <methods-and-on_12></methods-and-on_12>
+
+    <!--漂亮的学生列表-->
+    <beautiful-student-list_13></beautiful-student-list_13>
+
+    <!--父子组件的使用-->
+    <parent-child-components_14></parent-child-components_14>
+
+
+    <!--全局组件的使用-->
+    <globainamingresources_15></globainamingresources_15>
+
+    <!--父组件传值给子组件-->
+    <father-the-son_16></father-the-son_16>
+
+    <!--子组件传递数据给父组件-->
+    <child-the-parent_17></child-the-parent_17>
+
+
+    <!--过滤器-->
+    <filter_18></filter_18>
+
+
+    <!--获取DOM元素-->
+    <get-d-o-m-element_19></get-d-o-m-element_19>
+
+
+    <!--
+    mint-ui插件的使用
+    -->
+    <mint_ui_20></mint_ui_20>
+
+
+    <!--vue-router插件的使用-->
+    <vue_router_21></vue_router_21>
+
+    <!--router-link的学习-->
+    <router_link_22></router_link_22>
+
+
+    <!--编程导航的学习和使用-->
+    <programming_navigation_23></programming_navigation_23>
+
+    <!--
+    21.5、留坑(vue-router路由所需要的)
+    -->
+    <router-view></router-view>
+
+
+    <!--重定向和404-->
+    <redirect-and404_24></redirect-and404_24>
+
+    <!--多视图-->
+    <multi_view_25></multi_view_25>
+
+    <!--
+    axios的使用（处理网络请求的）
+    -->
+    <axios_26></axios_26>
+
+  </div>
+</template>
+
+<!--在Vue语法中script标签中都是用来处理逻辑的-->
+<script>
+import HelloWorld from './components/HelloWorld'
+import TodoList from './components/TodoList'
+import CommonInstruction_11 from './components/CommonInstruction_11'
+import EBar from './components/EBar'
+import MethodsAndOn_12 from './components/MethodsAndOn_12'
+import BeautifulStudentList_13 from './components/BeautifulStudentList_13'
+import ParentChildComponents_14 from './components/ParentChildComponents_14'
+import Globainamingresources_15 from './components/Globainamingresources_15'
+import FatherTheSon_16 from './components/FatherTheSon_16'
+import ChildTheParent_17 from './components/ChildTheParent_17'
+import Filter_18 from './components/Filter_18'
+import GetDOMElement_19 from './components/GetDOMElement_19'
+import mint_ui_20 from './components/mint_ui_20'
+import vue_router_21 from './components/vue_router_21'
+import router_link_22 from './components/router_link_22'
+import programming_navigation_23 from  './components/programming_navigation_23'
+import redirectAnd404_24 from './components/redirectAnd404_24'
+import multi_view_25 from './components/multi_view_25'
+import axios_26 from './components/axios_26'
+export default {
+  components: {
+    'todoList': TodoList,
+    'commonInstruction_11': CommonInstruction_11,
+    'eBar':EBar,
+    'methodsAndOn_12':MethodsAndOn_12,
+    'beautifulStudentList_13':BeautifulStudentList_13,
+    'parentChildComponents_14':ParentChildComponents_14,
+    'helloWorld':HelloWorld,
+    'globainamingresources_15':Globainamingresources_15,
+    'fatherTheSon_16':FatherTheSon_16,
+    'childTheParent_17':ChildTheParent_17,
+    'Filter_18':Filter_18,
+    'GetDOMElement_19':GetDOMElement_19,
+    'mint_ui_20':mint_ui_20,
+    'vue_router_21':vue_router_21,
+    'router_link_22':router_link_22,
+    'programming_navigation_23':programming_navigation_23,
+    'redirectAnd404_24':redirectAnd404_24,
+    'multi_view_25':multi_view_25,
+    'axios_26':axios_26
+  }
+  /*
+    在这里主要主要编写逻辑代码
+  */
+
+  /*
+    函数编写方式一：
+    data:function(){
+
+    }
+  */
+}
+</script>
+
+<style>
+
+</style>
