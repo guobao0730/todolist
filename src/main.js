@@ -77,10 +77,54 @@ Vue.config.productionTip = false*/
 
 
 /*
+* 引入Moment时间类库
+* */
+import Moment from 'moment'//导入文件
+Vue.prototype.$moment = Moment;//赋值使用
+
+
+
+/*
+* 30、moment配合过滤器来完成需求
+* 进行全局配置
+* convertData 表示过滤器的名称
+* function (value)  表示具体的实现函数
+* */
+Vue.filter('convertData',function (value) {
+  //表示将当前传入的时间格式化为：年-月-日  ，比如：2006-01-12
+  return Moment(value).format('YYYY-MM-DD');
+})
+
+
+
+/*
+* 引入Element
+* */
+import Element from 'element-ui'
+//引入Element自带的样式
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(Element)
+
+
+
+/*
+* 引入vue-preview(显示缩略图的插件)
+* */
+import VuePreView from 'vue-preview'
+Vue.use(VuePreView)
+
+
+import Vue2Preview from 'vue2-preview'
+Vue.use(Vue2Preview)
+
+
+/*
  *
  *21. 3、创建路由对象并配置路由规则
  * */
 let router = new VueRouter({
+
+  linkActiveClass:'mui-active',
   /*
    * routes 当前的KEY是固定的
    * */

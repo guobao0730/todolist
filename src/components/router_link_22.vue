@@ -53,6 +53,8 @@
           name:'login'    表示点击以后跳转到登录页面
           query:{id:index} 表示跳转页面时所传递的参数,query为固定写法，id是自定义的key，index表示id所对应的值 表示查询
 
+          在login页面通过 this.$route.query.id 获取传递过来的数据
+
           最终的结果：http://localhost:8081/#/login?id=0
           &ndash;&gt;
           <router-link :to="{name:'login' ,query:{id:index}}">
@@ -71,13 +73,15 @@
           {{item.name}}
           <!--
           点击查看以后跳转到哪里
-          :to="{name:'login' ,query:{id:index}}  表示要跳转到的哪个页面，并且传递对应的参数
+          :to="{name:'login' ,params:{id:index}}  表示要跳转到的哪个页面，并且传递对应的参数
           name:'login'    表示点击以后跳转到登录页面
           params:{id:index}} 表示跳转页面时所设置的路径
 
           此时必须将mian.js文件中的path:path:'/login' 改为path:'/login/:id'  ，此时的id与params中的id一一对应
           {name:'home', path:'/home',component:home},
           {name:'login', path:'/login/:id',component:login}
+
+           在login页面通过 this.$route.params.id 获取传递过来的数据
 
           最终的结果： http://localhost:8081/#/login/0
           -->
@@ -86,6 +90,46 @@
           </router-link>
         </li>
       </ul>
+
+
+      <div>
+        ============================22、router-link中linkActiveClass属性的使用============================
+      </div>
+      <!--
+      active-class
+      类型：string
+      默认值："router-link-active"
+      主要用来设置链接激活时使用的CSS类名，可以使用构造函数中的linkActiveClass属性来全局配置
+      比如在淘宝webApp项目中，当点击底部的4大按钮时，会将当前所点击的按钮设置为高亮的状态，也就是选中的状态，那么就可以使用linkActiveClass属性来全局配置
+      给当前选中的标签添加了一个样式，而这个样式可以自定义来实现，mui-active就是类选择器的名称
+
+      配置方式如下：
+      let router = new VueRouter({
+
+        linkActiveClass:'mui-active',
+        /*
+         * routes 当前的KEY是固定的
+         * */
+        routes:[
+
+          {name:'home', path:'/home',component:home},
+
+          {name:'login', path:'/login/:id',component:login},
+
+
+            /*表示设置重定向，页面初始直接进入到规则名称为splash的页面，也就是进入到splash页面*/
+          {path:'/',redirect:{name:'splash'}},
+          {name:'splash', path:'/splash',component:splash},
+
+
+        ]
+
+
+      })
+      -->
+
+
+
 
 
     </div>

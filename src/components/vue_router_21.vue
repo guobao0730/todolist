@@ -11,8 +11,8 @@
 
 
       vue-router 的使用方式
-      1、下载vue-router：npm install vue-router
-      2、在要main,js的文件中引入
+      1、下载vue-router：cnpm install vue-router
+      2、在要main.js的文件中引入
             import Vue from 'vue'
             import VueRouter from 'vue-router'
 

@@ -34,7 +34,7 @@ export default {
       * */
 
      /* console.log("login--id:"+this.$route.query);*/
-      console.log("login--id:"+this.$route.params);
+      console.log("login--id:"+this.$route.params.id);
 
       /*
       *目前通过query和params这两个关键词都无法正常传递参数，问题还在研究

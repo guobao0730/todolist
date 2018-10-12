@@ -4,10 +4,13 @@ const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
+
+
+
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
-
+resolve
 const createLintingRule = () => ({
   test: /\.(js|vue)$/,
   loader: 'eslint-loader',
@@ -19,7 +22,12 @@ const createLintingRule = () => ({
   }
 })
 
-module.exports = {
+
+
+
+const vuxLoader = require('vux-loader')
+
+const webpackConfig = {
   context: path.resolve(__dirname, '../'),
   entry: {
     app: './src/main.js'
@@ -32,7 +40,7 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json','less'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
@@ -90,3 +98,7 @@ module.exports = {
     child_process: 'empty'
   }
 }
+
+module.exports = vuxLoader.merge(webpackConfig, {
+  plugins: ['vux-ui']
+})

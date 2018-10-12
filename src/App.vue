@@ -102,6 +102,34 @@
     -->
     <axios_26></axios_26>
 
+    <!--过滤器-->
+    <interceptor_27></interceptor_27>
+
+    <!--watch关键字-->
+    <watch_28></watch_28>
+
+    <!--VUX的使用-->
+    <vux_29></vux_29>
+
+    <!--moment时间处理类库的使用-->
+    <Moment_30></Moment_30>
+
+    <!--Element组件的使用-->
+    <Element_31></Element_31>
+
+    <!---->
+    <vue-arrays_32></vue-arrays_32>
+
+    <!--利用Vue动态更改标签的属性-->
+    <dynamically-changing-label-properties_33></dynamically-changing-label-properties_33>
+
+    <vue-preview_34></vue-preview_34>
+
+    <FileUpload_35></FileUpload_35>
+
+
+    <vue2-preview_36></vue2-preview_36>
+
   </div>
 </template>
 
@@ -126,6 +154,16 @@ import programming_navigation_23 from  './components/programming_navigation_23'
 import redirectAnd404_24 from './components/redirectAnd404_24'
 import multi_view_25 from './components/multi_view_25'
 import axios_26 from './components/axios_26'
+import interceptor_27 from './components/interceptor_27'
+import watch_28 from './components/watch_28'
+import vux_29 from './components/vux_29'
+import Moment_30 from './components/Moment_30'
+import Element_31 from './components/Element_31'
+import VueArrays_32 from './components/VueArrays_32'
+import DynamicallyChangingLabelProperties_33 from './components/DynamicallyChangingLabelProperties_33'
+import VuePreview_34 from './components/VuePreview_34'
+import FileUpload_35 from './components/FileUpload_35'
+import Vue2Preview_36 from './components/Vue2Preview_36'
 export default {
   components: {
     'todoList': TodoList,
@@ -146,7 +184,17 @@ export default {
     'programming_navigation_23':programming_navigation_23,
     'redirectAnd404_24':redirectAnd404_24,
     'multi_view_25':multi_view_25,
-    'axios_26':axios_26
+    'axios_26':axios_26,
+    'interceptor_27':interceptor_27,
+    'watch_28':watch_28,
+    'vux_29':vux_29,
+    'Moment_30':Moment_30,
+    'Element_31':Element_31,
+    'VueArrays_32':VueArrays_32,
+    'DynamicallyChangingLabelProperties_33':DynamicallyChangingLabelProperties_33,
+    'VuePreview_34':VuePreview_34,
+    'FileUpload_35':FileUpload_35,
+    'Vue2Preview_36':Vue2Preview_36,
   }
   /*
     在这里主要主要编写逻辑代码
