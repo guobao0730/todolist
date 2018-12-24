@@ -23,7 +23,7 @@
         <el-button  @click="dialogVisible = true">Button</el-button>
 
         <!--
-        element-对话框
+        =====================element-对话框=====================
         -->
         <el-dialog
           title="提示"
@@ -37,6 +37,27 @@
           </span>
         </el-dialog>
 
+
+
+        <!--
+        =====================嵌套的 Dialog=====================
+        -->
+        <el-button  @click="bigDialogVisible = true">点击打开外层 Dialog</el-button>
+        <el-dialog title="外层 Dialog" :visible.sync="bigDialogVisible">
+          <el-dialog
+            width="30%"
+            title="内层 Dialog"
+            :visible.sync="minDialogVisible"
+            append-to-body>
+          </el-dialog>
+
+
+
+          <div slot="footer" class="dialog-footer">
+            <el-button @click="bigDialogVisible = false">取 消</el-button>
+            <el-button type="primary" @click="minDialogVisible = true">打开内层 Dialog</el-button>
+          </div>
+        </el-dialog>
 
 
 
@@ -114,6 +135,7 @@
 
 
 
+
         <div>===========vue2.0结合Element实现select动态控制input禁用===========</div>
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
 
@@ -132,6 +154,21 @@
 
 
 
+
+
+
+        <div>======================Tree 树形控件======================</div>
+        <el-tree :data="treeData" :props="defaultProps" @node-click="handleNodeClick"></el-tree>
+
+
+
+
+
+
+
+
+
+
       </div>
     </div>
 </template>
@@ -140,6 +177,7 @@
   import ComponentUploadDialog from './ComponentUploadDialog'
     export default {
         name: "Element_31",
+
       data(){
         return {
           dialogVisible: false,
@@ -151,7 +189,50 @@
             user: '',
             region: ''
           },
-          disabledInput:false
+          disabledInput:false,
+          bigDialogVisible:false,
+          minDialogVisible:false,
+          treeData: [{
+            label: '一级 1',
+            children: [{
+              label: '二级 1-1',
+              children: [{
+                label: '三级 1-1-1'
+              }]
+            }]
+          }, {
+            label: '一级 2',
+            children: [{
+              label: '二级 2-1',
+              children: [{
+                label: '三级 2-1-1'
+              }]
+            }, {
+              label: '二级 2-2',
+              children: [{
+                label: '三级 2-2-1'
+              }]
+            }]
+          }, {
+            label: '一级 3',
+            children: [{
+              label: '二级 3-1',
+              children: [{
+                label: '三级 3-1-1'
+              }]
+            }, {
+              label: '二级 3-2',
+              children: [{
+                label: '三级 3-2-1'
+              }]
+            }]
+          }],
+          defaultProps: {
+            children: 'children',
+            label: 'label'
+          }
+
+
         }
       },
       components:{
@@ -203,6 +284,11 @@
             this.disabledInput=false;
           }
 
+        },
+
+
+        handleNodeClick(data) {
+          console.log(data);
         }
 
 

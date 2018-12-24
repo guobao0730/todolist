@@ -11,7 +11,9 @@
 
 
         3、开始使用
-        this.$moment.format('MMMM Do YYYY, h:mm:ss a')
+
+         this.$moment.locale('zh-cn');
+          this.form.createTime  = this.$moment().format("YYYY-MM-DD HH:mm:ss");
         -->
         <button @click="getTime">开始通过Moment时间插件获取当前的时间</button>
         <div>{{time}}</div>

@@ -80,6 +80,10 @@
               </el-form-item>
 
 
+
+
+
+
             </div>
           </el-col>
         </el-row>
@@ -502,6 +506,7 @@ label-position="left" 表示设置左对齐
             ],
           },
 
+          value:'',
 
         }
       },

@@ -118,6 +118,16 @@ import Vue2Preview from 'vue2-preview'
 Vue.use(Vue2Preview)
 
 
+import jquery from 'jquery'
+Vue.prototype.$ = jquery;
+window.jQuery = jquery;
+
+import Jquery_contextmenu from 'jquery-contextmenu'
+Vue.use(Jquery_contextmenu)
+import 'jquery-contextmenu/dist/jquery.contextMenu.css'
+
+import store from './store'
+
 /*
  *
  *21. 3、创建路由对象并配置路由规则
@@ -172,6 +182,7 @@ new Vue({
   * router:router, 通过ES6可以将其简写为  router,
   * */
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

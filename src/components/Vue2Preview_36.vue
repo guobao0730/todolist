@@ -11,7 +11,6 @@
       3、使用
              <img class="preview-img" v-for="(item, index) in list" :src="item.src" height="100" @click="$preview.open(index, list)">
 
-
        height="100"   当前的宽高时预览图的宽高
       -->
       <div>

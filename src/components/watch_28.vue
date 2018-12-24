@@ -78,7 +78,6 @@
       //通过watch监听到value的值发生改变了
     },
 
-
       /*深度监听student对象数组发生了改变*/
       student:{
         handler:function (newArray,oldArray) {

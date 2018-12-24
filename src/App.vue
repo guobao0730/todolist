@@ -130,6 +130,34 @@
 
     <vue2-preview_36></vue2-preview_36>
 
+    <vuex_37></vuex_37>
+
+
+    <jsplumb_one_38></jsplumb_one_38>
+
+    <DragManuallyCreateLink_39></DragManuallyCreateLink_39>
+
+
+<!--    <js-plumb_two_40></js-plumb_two_40>-->
+
+   <!-- <js-plumb_three_41></js-plumb_three_41>-->
+
+    <JQuery_42></JQuery_42>
+
+    <JQuery_ui_43></JQuery_ui_43>
+
+    <Jquery_contextmenu_44></Jquery_contextmenu_44>
+
+    <element-u-i-remote-search_45></element-u-i-remote-search_45>
+
+    <element-u-i-table_46></element-u-i-table_46>
+
+
+    <element-u-i_-time-picker_47></element-u-i_-time-picker_47>
+
+    <vuex_48></vuex_48>
+
+
   </div>
 </template>
 
@@ -164,6 +192,18 @@ import DynamicallyChangingLabelProperties_33 from './components/DynamicallyChang
 import VuePreview_34 from './components/VuePreview_34'
 import FileUpload_35 from './components/FileUpload_35'
 import Vue2Preview_36 from './components/Vue2Preview_36'
+import Vuex_37 from './components/Vuex_37.vue'
+import Jsplumb_one_38 from './components/Jsplumb_one_38.vue'
+import DragManuallyCreateLink_39 from './components/DragManuallyCreateLink_39.vue'
+/*import JsPlumb_two_40 from './components/JsPlumb_two_40.vue'*/
+/*import JsPlumb_three_41 from './components/JsPlumb_three_41.vue'*/
+import JQuery_42 from './components/JQuery_42.vue'
+import JQuery_ui_43 from './components/JQuery_ui_43.vue'
+import Jquery_contextmenu_44 from './components/Jquery_contextmenu_44'
+import ElementUIRemoteSearch_45 from './components/ElementUIRemoteSearch_45'
+import ElementUITable_46 from './components/ElementUITable_46'
+import ElementUI_TimePicker_47 from './components/ElementUI_TimePicker_47'
+import Vuex_48 from './components/Vuex_48'
 export default {
   components: {
     'todoList': TodoList,
@@ -195,6 +235,18 @@ export default {
     'VuePreview_34':VuePreview_34,
     'FileUpload_35':FileUpload_35,
     'Vue2Preview_36':Vue2Preview_36,
+    'Vuex_37':Vuex_37,
+    'Jsplumb_one_38':Jsplumb_one_38,
+    'DragManuallyCreateLink_39':DragManuallyCreateLink_39,
+    /*'JsPlumb_two_40':JsPlumb_two_40,*/
+    /*'JsPlumb_three_41':JsPlumb_three_41,*/
+    'JQuery_42':JQuery_42,
+    'JQuery_ui_43':JQuery_ui_43,
+    'Jquery_contextmenu_44':Jquery_contextmenu_44,
+    'ElementUIRemoteSearch_45':ElementUIRemoteSearch_45,
+    'ElementUITable_46':ElementUITable_46,
+    'ElementUI_TimePicker_47':ElementUI_TimePicker_47,
+    'Vuex_48':Vuex_48,
   }
   /*
     在这里主要主要编写逻辑代码

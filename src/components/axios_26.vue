@@ -51,6 +51,7 @@ https://segmentfault.com/a/1190000008470355?utm_source=tuicool&utm_medium=referr
 </template>
 
 <script>
+  import Qs from 'qs'
   const URL = "http://restapi.amap.com/v3/place/text?&keywords=公交站点&city=杭州&output=json&offset=20&page=1&key=6b6ebee4f2f6ef4c55d1b4b52310acec&extensions=all";
 
   const URL2 = "http://101.200.177.100:8383/api/manager/login";
@@ -136,6 +137,66 @@ https://segmentfault.com/a/1190000008470355?utm_source=tuicool&utm_medium=referr
           })
 
 
+
+
+        /*
+        * POST请求方式二：
+        * 此种方式可以传递请求头
+        * */
+        let config = {
+          headers:{
+            "Authorization":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImNvbnRleHRVc2VySWQiOiIxIiwiY29udGV4dE5hbWUiOiLotoXnuqfnrqHnkIblkZgiLCJyZW5ld2FsVGltZSI6MTUzOTY1NDc0NDI0NSwiZXhwIjoxNTM5NjU4MzQ0fQ.3x7ItqM5ALBVAYTZ_qcX6x9N8fP4XzzHyyAjr7AMBlk",
+            'Content-Type': 'multipart/form-data'
+          }
+        }
+
+        this.$axios.post(URL2,
+          '',config
+        )
+          .then(response => {
+            console.log(response);
+          })
+          .catch(error => {
+            console.log(error);
+          })
+
+
+        /*
+        * POST请求方式三
+        * 该种方式利用qs传递一个对象,并且添加自定义请求头
+        *
+        * 1、在请求之前首先要安装qs:npm install qs
+        * 2、导包
+        * 2、利用qs.stringify()将对象数据转换为字符串
+        * 3、然后请求网络
+        * */
+        let obj = {
+          path:"EML/Data"
+        }
+        let requsetHeaders = {
+          headers:{
+            "Authorization":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImNvbnRleHRVc2VySWQiOiIxIiwiY29udGV4dE5hbWUiOiLotoXnuqfnrqHnkIblkZgiLCJyZW5ld2FsVGltZSI6MTUzOTg1MjU0NDk2OSwiZXhwIjoxNTM5ODU2MTQ0fQ.5QUfmgr1CmBMD_HpxdfaXlFnIILJ4-oJSJjKOp6PGfU",
+          }
+        }
+        let params = Qs.stringify(obj);
+        this.$axios.post("http://172.16.5.23:8002/api-master/aml/dataset/loadFile",params,requsetHeaders)
+          .then(function (result) {
+            console.log(result);
+            this.responseData = result;
+            /*
+{data: {…}, status: 200, statusText: "", headers: {…}, config: {…}, …}
+config: {adapter: ƒ, transformRequest: {…}, transformResponse: {…}, timeout: 0, xsrfCookieName: "XSRF-TOKEN", …}
+data: {id: "Data", name: "idData", category: null, path: "EML/Data", deprecated: null, …}
+headers: {content-type: "application/json;charset=UTF-8"}
+request: XMLHttpRequest {onreadystatechange: ƒ, readyState: 4, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, …}
+status: 200
+statusText: ""
+__proto__: Object
+            * */
+          })
+          .catch(function (error) {
+            console.log(error);
+          })
 
 
       },
