@@ -60,7 +60,6 @@ import splash from './components/splash'
 import notFoundVue from './components/notFoundVue'
 
 
-
 /*
 *2、 引入axios
 * 通过这种方式就可以全局使用axios
@@ -167,6 +166,8 @@ let router = new VueRouter({
     /*404页面
     * */
     {path:'*',component:notFoundVue},
+
+
 
   ]
 

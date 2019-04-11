@@ -157,6 +157,14 @@
 
     <vuex_48></vuex_48>
 
+    <Dialog_Echarts_49></Dialog_Echarts_49>
+
+    <progress-dialog_50></progress-dialog_50>
+
+    <picture-upload_51></picture-upload_51>
+
+
+    <meteor-shower_52></meteor-shower_52>
 
   </div>
 </template>
@@ -204,6 +212,10 @@ import ElementUIRemoteSearch_45 from './components/ElementUIRemoteSearch_45'
 import ElementUITable_46 from './components/ElementUITable_46'
 import ElementUI_TimePicker_47 from './components/ElementUI_TimePicker_47'
 import Vuex_48 from './components/Vuex_48'
+import Dialog_Echarts_49 from './components/Dialog_Echarts_49'
+import ProgressDialog_50 from './components/ProgressDialog_50.vue'
+import PictureUpload_51 from './components/PictureUpload_51.vue'
+import MeteorShower_52 from './components/MeteorShower_52'
 export default {
   components: {
     'todoList': TodoList,
@@ -247,7 +259,11 @@ export default {
     'ElementUITable_46':ElementUITable_46,
     'ElementUI_TimePicker_47':ElementUI_TimePicker_47,
     'Vuex_48':Vuex_48,
-  }
+    'Dialog_Echarts_49':Dialog_Echarts_49,
+    'ProgressDialog_50':ProgressDialog_50,
+    'PictureUpload_51':PictureUpload_51,
+    MeteorShower_52,
+  },
   /*
     在这里主要主要编写逻辑代码
   */
@@ -258,6 +274,8 @@ export default {
 
     }
   */
+
+
 }
 </script>
 

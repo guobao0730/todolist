@@ -56,6 +56,7 @@
           console.log("name:" + name);
           //name:2.png
           param.append('file', item.file);
+          console.log(param);
           let config = {
             headers:{
               "Authorization":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImNvbnRleHRVc2VySWQiOiIxIiwiY29udGV4dE5hbWUiOiLotoXnuqfnrqHnkIblkZgiLCJyZW5ld2FsVGltZSI6MTUzOTY1NDc0NDI0NSwiZXhwIjoxNTM5NjU4MzQ0fQ.3x7ItqM5ALBVAYTZ_qcX6x9N8fP4XzzHyyAjr7AMBlk",
