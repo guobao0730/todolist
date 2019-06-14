@@ -166,6 +166,12 @@
 
     <meteor-shower_52></meteor-shower_52>
 
+    <Computed_53></Computed_53>
+
+    <Vuex_54></Vuex_54>
+
+    <driver_55></driver_55>
+
   </div>
 </template>
 
@@ -216,6 +222,9 @@ import Dialog_Echarts_49 from './components/Dialog_Echarts_49'
 import ProgressDialog_50 from './components/ProgressDialog_50.vue'
 import PictureUpload_51 from './components/PictureUpload_51.vue'
 import MeteorShower_52 from './components/MeteorShower_52'
+import Computed_53 from './components/Computed_53'
+import Vuex_54 from './components/Vuex_54'
+import Driver_55 from './components/Driver_55'
 export default {
   components: {
     'todoList': TodoList,
@@ -263,6 +272,9 @@ export default {
     'ProgressDialog_50':ProgressDialog_50,
     'PictureUpload_51':PictureUpload_51,
     MeteorShower_52,
+    Computed_53,
+    Vuex_54,
+    Driver_55
   },
   /*
     在这里主要主要编写逻辑代码

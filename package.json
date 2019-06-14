@@ -11,6 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "driver.js": "^0.9.6",
     "echarts": "^4.1.0",
     "element-ui": "^2.4.6",
     "esprima-extract-comments": "^1.1.0",

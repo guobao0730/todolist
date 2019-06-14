@@ -1,6 +1,6 @@
 <template>
   <div>
-    ============================在el-dialog对话框中显示echarts图表============================
+    ============================49、在el-dialog对话框中显示echarts图表============================
 
     <div>
       <el-button type="primary" @click="showDialogEcharts()">显示对话框图表</el-button>

@@ -1,7 +1,12 @@
 <template>
-  <div :class="`core-object${item.name}`">
-    Vue中绑定值和字符串的拼接
+
+  <div>
+    ============================51、Vue中绑定值和字符串的拼接============================
+    <div :class="`core-object${item.name}`">
+      Vue中绑定值和字符串的拼接
+    </div>
   </div>
+
 </template>
 
 <script>

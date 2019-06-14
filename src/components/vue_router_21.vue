@@ -18,7 +18,7 @@
 
             Vue.use(VueRouter)
 
-      3、创建路由对象并配置路由规则(在main.js文件中完成`)
+      3、创建路由对象并配置路由规则(在main.js文件中完成 `)
       4、将其路由对象传递给Vue实例,options中(在main.js文件中完成`)
       5、留坑（在App.vue中的div中加入<router-view></router-view>）
 
