@@ -172,6 +172,36 @@
 
     <driver_55></driver_55>
 
+    <js_-cookie_56></js_-cookie_56>
+
+    <nprogress_57></nprogress_57>
+
+    <Scss_58></Scss_58>
+
+    <svg_59></svg_59>
+
+    <keyup_60></keyup_60>
+
+    <blur_61></blur_61>
+
+    <focus-and-blur_62></focus-and-blur_62>
+
+    <map-actions_63></map-actions_63>
+
+    <map-state_64></map-state_64>
+
+    <map-getters_65></map-getters_65>
+
+    <component_is_66></component_is_66>
+
+    <vue-count-to_67></vue-count-to_67>
+
+    <mixins_68></mixins_68>
+
+    <directives_69></directives_69>
+
+    <clipboard_70></clipboard_70>
+
   </div>
 </template>
 
@@ -225,6 +255,21 @@ import MeteorShower_52 from './components/MeteorShower_52'
 import Computed_53 from './components/Computed_53'
 import Vuex_54 from './components/Vuex_54'
 import Driver_55 from './components/Driver_55'
+import Js_Cookie_56 from './components/Js-Cookie_56'
+import Nprogress_57 from './components/Nprogress_57'
+import Scss_58 from './components/Scss_58'
+import Svg_59 from './components/Svg_59'
+import keyup_60 from './components/@keyup_60'
+import blur_61 from './components/@blur_61'
+import FocusAndBlur_62 from './components/FocusAndBlur_62'
+import mapActions_63 from './components/mapActions_63'
+import mapState_64 from './components/mapState_64'
+import mapGetters_65 from './components/mapGetters_65'
+import Component_is_66 from './components/Component_is_66'
+import VueCountTo_67 from './components/VueCountTo_67'
+import Mixins_68 from './components/Mixins_68'
+import Directives_69 from './components/Directives_69'
+import Clipboard_70 from './components/Clipboard_70'
 export default {
   components: {
     'todoList': TodoList,
@@ -274,7 +319,22 @@ export default {
     MeteorShower_52,
     Computed_53,
     Vuex_54,
-    Driver_55
+    Driver_55,
+    Js_Cookie_56,
+    Nprogress_57,
+    Scss_58,
+    Svg_59,
+    keyup_60,
+    blur_61,
+    FocusAndBlur_62,
+    mapActions_63,
+    mapState_64,
+    mapGetters_65,
+    Component_is_66,
+    VueCountTo_67,
+    Mixins_68,
+    Directives_69,
+    Clipboard_70
   },
   /*
     在这里主要主要编写逻辑代码

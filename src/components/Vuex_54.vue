@@ -9,18 +9,17 @@
 </template>
 
 <script>
-  import store from '../store/index'
     export default {
         name: "Vuex_54",
-      store,
+      /*store,*/
       data() {
           return {
-            number:store.state.number
+            number:this.$store.state.number
           }
       },
       computed:{
           sun(){
-            return store.state.number
+            return this.$store.state.number
           }
       }
     }

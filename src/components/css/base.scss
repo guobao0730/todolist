@@ -1,0 +1,21 @@
+/**
+ *@project： todolist
+ *@package：
+ *@date：2019/6/25 0025 15:59
+ *@author 郭宝
+ *@brief: 基础样式
+ */
+
+
+$bg:#2d3a4b;
+$font-color:white;
+$font-size:14px;
+
+.mt_20 {
+  margin-top: 20px;
+}
+
+.font-style {
+  font-size: $font-size;
+  color: $font-color;
+}

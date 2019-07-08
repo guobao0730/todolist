@@ -85,7 +85,7 @@ Vue.prototype.$moment = Moment;//赋值使用
 
 /*
 * 30、moment配合过滤器来完成需求
-* 进行全局配置
+*全局过滤器
 * convertData 表示过滤器的名称
 * function (value)  表示具体的实现函数
 * */
@@ -126,6 +126,16 @@ Vue.use(Jquery_contextmenu)
 import 'jquery-contextmenu/dist/jquery.contextMenu.css'
 
 import store from './store'
+
+import NProgress from 'nprogress' // 进度条
+import 'nprogress/nprogress.css' // 进度条样式
+
+NProgress.configure({ showSpinner: false }) // NProgress 配置 ，showSpinner: false 表示禁用右边的环形进度条
+
+/*
+import clipboard from 'clipboard'
+Vue.prototype.clipboard = clipboard;*/
+
 
 /*
  *
@@ -174,6 +184,40 @@ let router = new VueRouter({
 
 })
 
+/*/!*
+* 全局注册v-img 指令
+* *!/
+Vue.directive('img',{
+  inserted:function (el,binding) {
+    const color = Math.floor(Math.random()*1000000);
+    el.style.backgroundColor = '#'+color; //设置默认的颜色
+
+    const img = new Image();
+    img.src = binding.value; //获取传入该指令的值
+
+    img.onload = function () {
+      el.style.backgroundImage = 'url('+binding.value+')';
+    }
+
+  }
+});*/
+
+
+
+router.beforeEach(async(to, from, next) => {
+  console.log("路由跳转之前");
+//显示进度条
+  NProgress.start();
+
+  //继续向下执行
+  next();
+});
+
+router.afterEach(() => {
+  console.log("路由跳转之后");
+//结束进度条
+  NProgress.done();
+});
 
 /* eslint-disable no-new */
 new Vue({
