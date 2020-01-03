@@ -19,6 +19,8 @@
       <button @click="changeArray">通过watch关键字深度监听数组对象的改变</button>
 
 
+      <button @click="changeObject">通过watch关键字监听对象中的某个变量</button>
+
       <!--
       price,number,rate是三个变量
       当前的sum是一个函数
@@ -47,11 +49,12 @@
         }, {
           name: '李四'
         }],
-
-
         price: 0,
         number: 0,
         rate: 0,
+        user:{
+          name:'张三'
+        }
       }
     },
     methods: {
@@ -62,6 +65,9 @@
 
       changeArray() {
         this.student[0].name = '郭宝';
+      },
+      changeObject() {
+        this.user.name = "李四";
       }
     },
     watch: {
@@ -83,8 +89,18 @@
           //通过watch深度监听到student的值发生改变了
         },
         deep: true
-      }
+      },
 
+      /*
+      * user 是一个对象
+      * name 是user对象中的一个变量
+      * */
+      'user.name'(value){
+        console.log("监听对象中的变量");
+        // 监听对象中的变量
+        console.log(value);
+        // 李四
+      }
 
     },
 

@@ -58,6 +58,10 @@
         label="操作"
         width="100">
         <template slot-scope="scope">
+          <!--
+          scope.row 表示当前行的数据
+          scope.$index  表示当前行的下标
+          -->
           <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button>
           <el-button type="text" size="small">编辑</el-button>
         </template>
@@ -74,6 +78,15 @@
       methods: {
         handleClick(row) {
           console.log(row);
+          /*
+          {…}
+address: "上海市普陀区金沙江路 1518 弄"
+city: "普陀区"
+date: "2016-05-03"
+name: "王小虎"
+province: "上海"
+zip: 200333
+          * */
         }
       },
 

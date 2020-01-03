@@ -202,6 +202,34 @@
 
     <clipboard_70></clipboard_70>
 
+    <smoothscroll-polyfill_71></smoothscroll-polyfill_71>
+
+    <global-function_72></global-function_72>
+
+    <vue-particles_73></vue-particles_73>
+
+    <vue-splitpane_74></vue-splitpane_74>
+
+    <dynamic-add-selector_75></dynamic-add-selector_75>
+
+    <components-call-each-other_76></components-call-each-other_76>
+
+    <dynamic-addition-of-different-components_77></dynamic-addition-of-different-components_77>
+
+    <test_78></test_78>
+
+    <process-of-clustering-chart_79></process-of-clustering-chart_79>
+
+    <r-o-c-curve-chart_80></r-o-c-curve-chart_80>
+
+    <class_81></class_81>
+
+    <boxplot_82></boxplot_82>
+
+    <d3_83></d3_83>
+
+    <decision-tree_84></decision-tree_84>
+
   </div>
 </template>
 
@@ -270,6 +298,20 @@ import VueCountTo_67 from './components/VueCountTo_67'
 import Mixins_68 from './components/Mixins_68'
 import Directives_69 from './components/Directives_69'
 import Clipboard_70 from './components/Clipboard_70'
+import SmoothscrollPolyfill_71 from './components/SmoothscrollPolyfill_71'
+import GlobalFunction_72 from './components/GlobalFunction_72'
+import VueParticles_73 from './components/VueParticles_73'
+import VueSplitpane_74 from './components/VueSplitpane_74'
+import DynamicAddSelector_75 from './components/DynamicAddSelector_75'
+import ComponentsCallEachOther_76 from './components/ComponentsCallEachOther_76.vue'
+import DynamicAdditionOfDifferentComponents_77 from './components/DynamicAdditionOfDifferentComponents_77.vue'
+import Test_78 from './components/Test_78.vue'
+import ProcessOfClusteringChart_79 from './components/ProcessOfClusteringChart_79'
+import ROCCurveChart_80 from './components/ROCCurveChart_80'
+import Class_81 from './components/Class_81.vue'
+import Boxplot_82 from './components/Boxplot_82.vue'
+import d3_83 from './components/d3_83.vue'
+import DecisionTree_84 from './components/DecisionTree_84'
 export default {
   components: {
     'todoList': TodoList,
@@ -334,7 +376,21 @@ export default {
     VueCountTo_67,
     Mixins_68,
     Directives_69,
-    Clipboard_70
+    Clipboard_70,
+    SmoothscrollPolyfill_71,
+    GlobalFunction_72,
+    VueParticles_73,
+    VueSplitpane_74,
+    DynamicAddSelector_75,
+    ComponentsCallEachOther_76,
+    DynamicAdditionOfDifferentComponents_77,
+    Test_78,
+    ProcessOfClusteringChart_79,
+    ROCCurveChart_80,
+    Class_81,
+    Boxplot_82,
+    d3_83,
+    DecisionTree_84
   },
   /*
     在这里主要主要编写逻辑代码

@@ -138,6 +138,45 @@ Vue.prototype.clipboard = clipboard;*/
 
 
 /*
+* 引入页面平滑滚动插件
+* */
+import smoothscroll from 'smoothscroll-polyfill'
+smoothscroll.polyfill();
+
+
+
+import MathUtil from './utils/mathUtil'
+Vue.prototype.$MathUtil = MathUtil;
+
+
+
+
+
+/*
+*自定义一个全局函数
+*$maxValue  表示自定义的函数名称
+* value1,value2 表示调用该函数时所需传递的参数
+* */
+Vue.prototype.$maxValue = function(value1,value2){
+  console.log("value1:"+value1);
+  console.log("value2:"+value2);
+  return value1>value2?value1:value2;
+};
+
+
+
+import VueParticles from 'vue-particles'
+Vue.use(VueParticles)
+
+
+/*
+* 全局引入垂直水平分割窗口的组件
+* */
+import splitPane from 'vue-splitpane'
+Vue.component('split-pane', splitPane);
+
+
+/*
  *
  *21. 3、创建路由对象并配置路由规则
  * */

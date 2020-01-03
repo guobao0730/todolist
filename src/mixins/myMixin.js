@@ -7,6 +7,7 @@
  * 使用背景：
  *    有很多个部分相同的组件，使用每个组件都需要传入该组件的配置相关信息，而且每个组件都会点击保存以后将新配置信息传出去，那么这个时候就可以使用混入来实现
  */
+import mathUtil from "../utils/mathUtil";
 
 export default {
   data(){

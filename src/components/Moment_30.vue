@@ -30,6 +30,10 @@
         <div>{{defaultTime | convertData}}</div>
 
 
+        <button @click="getCurrentTime">将当前的时间格式化输出</button>
+
+        <button @click="formatTheSpecifiedDate">将指定时间格式化</button>
+
       </div>
     </div>
 </template>
@@ -60,6 +64,26 @@
 
           console.log(this.$moment().format('L'));
           //09/09/2018
+        },
+
+        /*
+        * 获取当前格式化以后的日期
+        * */
+        getCurrentTime: function () {
+          this.$moment.locale('zh-cn');
+          let dateThree = this.$moment().format('YYYY-MM-DD');
+          console.log("dateThree:"+dateThree);
+          //dateThree:2019-07-25
+        },
+
+        /*
+        * 格式化指定日期
+        * */
+        formatTheSpecifiedDate({date = "January 12,2006 22:19:35"}){
+          this.$moment.locale('zh-cn');
+          let dateFour = this.$moment(date).format('YYYY-MM-DD');
+          console.log("dateFour:"+dateFour);
+          //dateFour:2006-01-12
         }
       }
     }

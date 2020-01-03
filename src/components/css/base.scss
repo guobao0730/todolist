@@ -11,11 +11,20 @@ $bg:#2d3a4b;
 $font-color:white;
 $font-size:14px;
 
+/*
+1px表示X轴偏移量（取值范围负数~正数，负数阴影在左，正数阴影在右），2px表示Y轴偏移量，3px表示模糊度(数值越大越模
+*/
+$text-shadow:1px 2px 3px red;
+
+
 .mt_20 {
   margin-top: 20px;
 }
+
+
 
 .font-style {
   font-size: $font-size;
   color: $font-color;
 }
+

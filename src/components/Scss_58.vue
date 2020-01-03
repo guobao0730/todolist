@@ -159,6 +159,7 @@ lang="scss" 表示声明使用scss语言
   .icss {
     margin-top: 100px;
     margin-left: 30px;
+    background-color: $bg;
     &:hover {
       color: red;
       font-size: 100px;
