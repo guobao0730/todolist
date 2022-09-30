@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "clipboard": "^2.0.4",
-    "d3": "^5.9.7",
+    "d3": "^7.6.1",
     "driver.js": "^0.9.6",
     "echarts": "^4.1.0",
     "echarts-stat": "^1.1.1",
